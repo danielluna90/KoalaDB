@@ -6,18 +6,28 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
   //NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+import Link from "next/link";
 
 export function AppNavbar() {
     return (
         <NavigationMenu>
         <NavigationMenuList>
             <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
             <NavigationMenuContent>
-                <NavigationMenuLink>Link</NavigationMenuLink>
+                <NavigationMenuLink>Getting Started</NavigationMenuLink>
             </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+                <Link href="https://github.com/danielluna90/koaladb" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Github
+                    </NavigationMenuLink>
+                </Link>
             </NavigationMenuItem>
         </NavigationMenuList>
         </NavigationMenu>
