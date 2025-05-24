@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/appsidebar";
-import { AppNavbar } from "@/components/app/appnavbar";
 import { ThemeProvider } from "@/components/app/theme-provider";
 
 import "./globals.css";
@@ -35,9 +34,6 @@ export default function RootLayout({
               <div className="flex items-center gap-2">
                 <SidebarTrigger />
                 <h1 className="font-black text-xl">KoalaDB</h1>
-              </div>
-              <div className="ml-auto flex items-center gap-2">
-                <AppNavbar />
               </div>
               <div className="ml-auto flex items-center gap-2">
                 <ThemeToggle />
